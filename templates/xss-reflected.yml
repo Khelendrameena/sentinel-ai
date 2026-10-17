@@ -1,0 +1,9 @@
+id: xss-reflected
+name: Reflected XSS via search param
+severity: high
+description: User input reflected without encoding - potential XSS
+path: /search
+match:
+  type: reflect
+  param: q
+  payload: "<script>alert(1)</script>"

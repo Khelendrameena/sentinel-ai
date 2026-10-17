@@ -1,0 +1,8 @@
+id: git-exposed
+name: Exposed .git directory
+severity: critical
+description: .git/HEAD accessible - full source code disclosure possible
+path: /.git/HEAD
+match:
+  type: body_regex
+  regex: "ref: refs/heads"

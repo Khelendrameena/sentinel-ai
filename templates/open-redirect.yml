@@ -1,0 +1,9 @@
+id: open-redirect
+name: Open redirect
+severity: medium
+description: URL parameter allows redirect to external domain
+path: /redirect
+match:
+  type: reflect
+  param: url
+  payload: "https://evil.com"

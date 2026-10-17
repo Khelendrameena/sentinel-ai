@@ -1,0 +1,10 @@
+id: sqli-error
+name: SQL error disclosure
+severity: high
+description: SQL error message in response suggests injection
+path: /
+match:
+  type: body_regex
+  param: id
+  payload: "'"
+  regex: "SQL syntax|mysql_fetch|ORA-[0-9]+|PostgreSQL.*ERROR"

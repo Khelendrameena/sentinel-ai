@@ -1,0 +1,8 @@
+id: debug-mode
+name: Debug mode enabled
+severity: medium
+description: Application running in debug mode - info disclosure
+path: /
+match:
+  type: body_regex
+  regex: "DEBUG.*True|django.*debug|flask.*debugger"
